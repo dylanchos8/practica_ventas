@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e6f0ff;
+    color: #002f6c;
+    padding: 40px;
+}
+
+/* Logo */
+#logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 120px;
+    height: auto;
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #002f6c;
+    margin-bottom: 30px;
+}
+
+/* Formulario cliente */
+form#formClientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+form#formClientes input,
+form#formClientes button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #b3cde0;
+    background-color: #fff;
+    color: #002f6c;
+}
+
+form#formClientes input:focus {
+    outline: none;
+    border-color: #002f6c;
+}
+
+form#formClientes button {
+    background-color: #002f6c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form#formClientes button:hover {
+    background-color: #004b99;
+}
+
+/* Formulario productos */
+form#formProductos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+form#formProductos input,
+form#formProductos button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #b3cde0;
+    background-color: #fff;
+    color: #002f6c;
+}
+
+form#formProductos input:focus {
+    outline: none;
+    border-color: #002f6c;
+}
+
+form#formProductos button {
+    background-color: #002f6c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form#formProductos button:hover {
+    background-color: #004b99;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 47, 108, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #002f6c;
+    color: #fff;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:hover {
+    background-color: #f0f8ff;
+}

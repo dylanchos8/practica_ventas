@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTOS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <a href="index.html" class="enlace-elegante">clientes</a>
+
+</head>
+<body>
+    <img id="logo" src="../img/millonarios-logo.png">
+    <h1>Gestión productos</h1>
+    <form id="formProductos">
+        <input type="text" id="nombre_prod" placeholder="Producto" required>
+        <input type="number" id="stock" placeholder="Cantidad" required>
+        <input type="number" id="precio" placeholder="Valor Unidad" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Valor Unidad</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos">
+        </tbody>
+    </table>
+    <script src="./js/productoMain.js"></script>
+</body>
+</html>
