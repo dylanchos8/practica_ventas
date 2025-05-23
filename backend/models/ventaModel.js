@@ -1,7 +1,7 @@
 import { db } from "../config/db.js";
 
 export const registrarVenta = (venta, callback) => {
-    const { id_cliente, id_producto, cantidad} = venta;
+    const { id_cliente, id_producto, cantidad } = venta;
     db.query('Select precio, stock from productos where id = ?', [id_producto], (err, results) => {
         if (err) return callback(err);
         if (results.length === 0) {
@@ -29,5 +29,18 @@ export const registrarVenta = (venta, callback) => {
 
 
         })
-    })
-}
+    }
+
+export const obtenerVentas = (callback) => {
+    db.query(`
+        select ventas.id, clientes.nombre, producto.nombre_prod, 
+        ventas.cantidad, v.precio_unitario, ventas.total, v.fecha
+        from ventas 
+        join clientes on ventas.id_cliente = clientes.id
+        join productos on ventas.id_producto = package.id
+        order by ventas.fecha desc
+        `, (err, results) => {
+            if (err) return callback(err);
+            callback(null, results);  
+        });
+};
