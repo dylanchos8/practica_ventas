@@ -19,17 +19,14 @@ export const registrarVenta = (venta, callback) => {
             (err, resultado) => {
                 if (err) return callback(err);
                 //actulizar el stock de productos
-                db.query('update productos set stock = stock -? where id = ?', [cantidad, id_producto], (err2) => {
+                db.query('UPDATE productos SET stock = stock - ? WHERE id = ?', [cantidad, id_producto], (err2) => {
                     if (err2) return callback(err2);
                     callback(null, resultado);
                 });
             }
         )
-
-
-
-        })
-    }
+    })
+}
 
 export const obtenerVentas = (callback) => {
     db.query(`
